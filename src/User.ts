@@ -3,15 +3,19 @@ import { faker } from "@faker-js/faker"
 export class User {
   name: string
   location: {
-    lat: number,
-    long: number
+    lat: number;
+    lng: number;
+  }
+
+  showInfo() {
+    return 'User is abc'
   }
 
   constructor() {
     this.name = faker.name.firstName()
     this.location = {
       lat: faker.address.latitude(),
-      long: faker.address.longitude()
+      lng: faker.address.longitude()
     }
   }
 }
